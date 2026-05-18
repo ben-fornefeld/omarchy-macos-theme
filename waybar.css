@@ -1,0 +1,164 @@
+/* macOS 2026 "Tahoe" — menu bar (Liquid Glass chrome)
+ * Derived from style-plan.json components.menu_bar
+ *
+ * Key for macOS feel:
+ *   - Very low alpha (≈0.30) so Hyprland's kawase blur does the heavy lifting
+ *   - Subtle top highlight + soft bottom shadow simulate the glass edge
+ *   - No hard border — the material itself separates from content
+ */
+
+@define-color foreground #FFFFFF;
+@define-color background transparent;
+@define-color muted rgba(235, 235, 245, 0.70);
+@define-color accent #D1D1D6;
+@define-color pill-hover rgba(255, 255, 255, 0.12);
+@define-color pill-active rgba(255, 255, 255, 0.22);
+@define-color pill-accent rgba(209, 209, 214, 0.28);
+@define-color hairline rgba(255, 255, 255, 0.08);
+
+* {
+  font-family: 'SF Pro Display', 'Inter', 'JetBrainsMono Nerd Font', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  min-height: 0;
+  color: @foreground;
+  border: none;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Bar itself: fully transparent. No strip, no inset edges.
+ * Text floats directly over the wallpaper; the layer-blur rule has
+ * nothing opaque to blur here, so it's effectively a no-op for the bar. */
+window#waybar {
+  background: transparent;
+  color: @foreground;
+  box-shadow: none;
+  border: none;
+}
+
+/* Region containers */
+.modules-left {
+  margin-left: 6px;
+}
+
+.modules-right {
+  margin-right: 6px;
+}
+
+.modules-center {
+  margin: 0;
+}
+
+/* Workspaces — macOS-style mini dots / pills */
+#workspaces {
+  margin: 0 4px;
+  padding: 0;
+  background: transparent;
+}
+
+#workspaces button {
+  all: initial;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+  color: @muted;
+  padding: 1px 9px;
+  margin: 4px 2px;
+  border-radius: 999px;
+  min-width: 18px;
+  transition:
+    background-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 180ms ease;
+}
+
+#workspaces button:hover {
+  background-color: @pill-hover;
+  color: @foreground;
+}
+
+#workspaces button.active {
+  background-color: transparent;
+  color: @foreground;
+  font-weight: 600;
+}
+
+#workspaces button.empty {
+  opacity: 0.35;
+}
+
+/* Center cluster — clock etc., centered like macOS */
+#clock {
+  padding: 2px 10px;
+  margin: 4px 4px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 12px;
+  color: @foreground;
+  letter-spacing: -0.01em;
+}
+
+#clock:hover {
+  background-color: @pill-hover;
+}
+
+/* Right-side status modules — pill group */
+#battery,
+#cpu,
+#pulseaudio,
+#network,
+#bluetooth,
+#tray,
+#custom-omarchy,
+#custom-update {
+  padding: 2px 8px;
+  margin: 4px 1px;
+  border-radius: 999px;
+  color: @foreground;
+  transition: background-color 150ms ease;
+}
+
+#battery:hover,
+#cpu:hover,
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#tray:hover,
+#custom-omarchy:hover,
+#custom-update:hover {
+  background-color: @pill-hover;
+}
+
+#battery.critical {
+  color: #FF375F;
+}
+#battery.warning {
+  color: #FF9F0A;
+}
+
+#custom-screenrecording-indicator.active,
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #FF375F;
+}
+
+#custom-voxtype.recording {
+  color: #FF375F;
+}
+
+tooltip {
+  background: rgba(28, 28, 30, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 4px;
+  color: @foreground;
+}
+
+tooltip label {
+  color: @foreground;
+  padding: 2px 6px;
+}
+
+.hidden {
+  opacity: 0;
+}

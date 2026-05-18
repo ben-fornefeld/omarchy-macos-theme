@@ -1,0 +1,31 @@
+# macOS 2026 "Tahoe" — Liquid Glass palette
+# Source of truth: style-plan.json
+
+accent = "#D1D1D6"
+cursor = "#FFFFFF"
+
+foreground = "#EBEBF5"
+background = "#1C1C1E"
+
+selection_foreground = "#1C1C1E"
+selection_background = "#D1D1D6"
+
+# ANSI 0-7
+color0 = "#1C1C1E"
+color1 = "#FF453A"
+color2 = "#30D158"
+color3 = "#FFD60A"
+color4 = "#FF375F"
+color5 = "#BF5AF2"
+color6 = "#64D2FF"
+color7 = "#EBEBF5"
+
+# ANSI 8-15 (bright)
+color8  = "#48484A"
+color9  = "#FF6961"
+color10 = "#5DE396"
+color11 = "#FFE066"
+color12 = "#FF6B9A"
+color13 = "#DA8FFF"
+color14 = "#8FE1FF"
+color15 = "#FFFFFF"

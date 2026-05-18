@@ -1,0 +1,9 @@
+/* macOS 2026 "Tahoe" — OSD (volume/brightness)
+ * Derived from style-plan.json components.osd
+ */
+
+@define-color background-color rgba(28, 28, 30, 0.80);
+@define-color border-color rgba(255, 255, 255, 0.10);
+@define-color label #FFFFFF;
+@define-color image #FFFFFF;
+@define-color progress #D1D1D6;
