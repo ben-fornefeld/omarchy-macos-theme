@@ -1,0 +1,10 @@
+# Dropdowns/flyouts — see /usr/share/omarchy/default/themed/shell.toml.tpl.
+# Frosted-glass card (translucent + blurred, hairline border) instead of a
+# flat opaque panel, matching the terminal's translucency.
+[popups]
+background       = "#1C1C1E"
+background-alpha = 0.85
+text             = "#EBEBF5"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+border-width     = 1

@@ -1,0 +1,9 @@
+# Shared border tokens for every shell card (popups, notifications, menu,
+# launcher, polkit, lock) — see /usr/share/omarchy/default/themed/shell.toml.tpl.
+# Matched to the same hairline used for Hyprland window borders (see
+# hyprland.lua) instead of the default solid accent-gray border, so shell
+# chrome reads as one consistent macOS-style system.
+[hyprland]
+active-border            = "rgba(FFFFFF1F)"
+active-border-foreground = "rgba(FFFFFF1F)"
+active-border-width      = 1

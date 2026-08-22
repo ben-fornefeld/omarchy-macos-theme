@@ -1,0 +1,18 @@
+# System/context menu — see /usr/share/omarchy/default/themed/shell.toml.tpl.
+# Frosted-glass card (translucent + blurred, hairline border) instead of a
+# flat panel with a solid accent-gray border, matching the terminal's
+# translucency and the window hairline border.
+[menu]
+background                = "#1C1C1E"
+background-alpha          = 0.85
+text                      = "#EBEBF5"
+border                    = "hyprland.active-border-foreground"
+border-alpha               = 1.0
+border-width               = 1
+scrim                      = "#1C1C1E"
+scrim-alpha                = 0.5
+selected-background        = "#EBEBF5"
+selected-background-alpha  = 0.08
+selected-text              = "#D1D1D6"
+selected-border            = "hyprland.active-border-foreground"
+selected-border-alpha      = 0.25
