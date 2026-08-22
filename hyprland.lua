@@ -60,8 +60,11 @@ hl.config({
     rounding = 12,
     rounding_power = 4,
 
+    -- macOS doesn't dim/fade inactive window content at all — the only
+    -- unfocused cue is a softer shadow (below), so opacity is the same in
+    -- both states.
     active_opacity = 0.97,
-    inactive_opacity = 0.90,
+    inactive_opacity = 0.97,
     fullscreen_opacity = 1.0,
 
     shadow = {
