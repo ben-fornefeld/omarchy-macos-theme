@@ -1,0 +1,14 @@
+# Bar section override — see /usr/share/omarchy/default/themed/shell.toml.tpl.
+# The bar should read as floating icons over the desktop, matching macOS's
+# menu bar, so background-alpha is 0 (no panel/background at all). Note:
+# `omarchy-theme-set-templates` swaps this file's whole [bar] section in
+# wholesale (no key-level merge), so every other bar key from the generated
+# default is repeated here verbatim — only background-alpha changes.
+[bar]
+background       = "#1C1C1E"
+background-alpha = 0.0
+text             = "#EBEBF5"
+active           = "#FF453A"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28
