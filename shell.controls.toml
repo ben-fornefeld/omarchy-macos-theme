@@ -1,0 +1,16 @@
+# Shared controls keep menus and popovers crisp without conspicuous outlines.
+# Corner radius follows Hyprland's 12 px continuous-corner setting.
+[controls]
+normal-fill-alpha         = 0.03
+normal-border             = "hyprland.active-border-foreground"
+normal-border-width       = 1
+normal-border-alpha       = 0.70
+hover-cursor-fill-alpha   = 0.07
+hover-cursor-border       = "hyprland.active-border-foreground"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 1.0
+focus-fill-alpha          = 0.07
+focus-border              = "hyprland.active-border-foreground"
+focus-border-width        = 1
+focus-border-alpha        = 1.0
+selected-border-width     = 0
